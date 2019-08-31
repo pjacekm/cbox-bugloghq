@@ -290,7 +290,7 @@
 			}
 
 			// reconstruct full URL
-			tmpURL = getPageContext().getRequest().getRequestURL();
+			tmpURL = getPageContext().getRequest().getRequestURL() & getPageContext().getRequest().getPathInfo();
 			if(cgi.QUERY_STRING neq "")
 				tmpURL = tmpURL & "?" & cgi.QUERY_STRING;
 		</cfscript>
